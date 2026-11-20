@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="CV interactif d'Emre Haydin" />
+    <title>Emre Haydin — CV interactif</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="#accueil" aria-label="Retour en haut">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span>EH</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#profil">Profil</a>
+        <a href="#experiences">Expériences</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Changer de thème" title="Changer de thème">
+        <span aria-hidden="true">☼</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="accueil">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Disponible pour un stage</p>
+          <h1>Emre <span>Haydin.</span></h1>
+          <p class="role"><span>&gt;</span> Développeur web &amp; créateur de solutions</p>
+          <p class="intro">J'apprends, j'expérimente et je construis des interfaces utiles. Bienvenue dans mon parcours interactif.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#experiences">Explorer mon CV <span>↘</span></a>
+            <button class="button button-ghost" id="surprise-button" type="button">Lance-moi un défi <span>✦</span></button>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Statistiques du profil">
+          <div class="window-bar">
+            <span></span><span></span><span></span>
+            <small>profil.js</small>
+          </div>
+          <div class="code-card">
+            <p><b>const</b> emre = {</p>
+            <p>&nbsp;&nbsp;ville: <span>"France"</span>,</p>
+            <p>&nbsp;&nbsp;mode: <span>"curieux"</span>,</p>
+            <p>&nbsp;&nbsp;objectif: <span>"apprendre"</span>,</p>
+            <p>&nbsp;&nbsp;prêtÀCoder: <span class="boolean">true</span></p>
+            <p>};</p>
+            <p class="cursor-line"><b>emre</b>.mission();<span class="cursor"></span></p>
+          </div>
+          <div class="xp-panel">
+            <span>Niveau</span>
+            <strong id="level">04</strong>
+            <div class="xp-track"><i id="xp-bar"></i></div>
+            <small id="xp-label">240 / 300 XP</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="profil">
+        <div class="section-heading">
+          <p>01 / À propos</p>
+          <h2>Un profil, plusieurs <em>possibilités.</em></h2>
+        </div>
+        <div class="profile-grid">
+          <p class="profile-text">Je suis passionné par la création numérique : comprendre un besoin, imaginer une solution puis la transformer en une expérience claire et agréable.</p>
+          <div class="traits">
+            <article><span>01</span><h3>Curieux</h3><p>J'aime chercher, tester et comprendre.</p></article>
+            <article><span>02</span><h3>Pratique</h3><p>Je passe rapidement des idées au code.</p></article>
+            <article><span>03</span><h3>Autonome</h3><p>Je trouve des réponses et je persévère.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experiences">
+        <div class="section-heading">
+          <p>02 / Parcours</p>
+          <h2>Expériences <em>&amp; formations</em></h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <time>2025 — Aujourd'hui</time>
+            <div>
+              <span class="tag">Formation</span>
+              <h3>Développement web</h3>
+              <p>Création d'applications modernes, travail collaboratif et projets concrets.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <time>Mes projets</time>
+            <div>
+              <span class="tag">Pratique</span>
+              <h3>Sites &amp; applications</h3>
+              <p>Construction de projets interactifs pour progresser en HTML, CSS, JavaScript et algorithmique.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="competences">
+        <div class="section-heading">
+          <p>03 / Arsenal</p>
+          <h2>Compétences <em>à débloquer.</em></h2>
+        </div>
+        <div class="skill-grid">
+          <button class="skill" type="button" data-xp="25"><span>HTML</span><b>Intermédiaire</b><i></i></button>
+          <button class="skill" type="button" data-xp="25"><span>CSS</span><b>Intermédiaire</b><i></i></button>
+          <button class="skill" type="button" data-xp="25"><span>JavaScript</span><b>En progression</b><i></i></button>
+          <button class="skill" type="button" data-xp="25"><span>Git</span><b>Pratique</b><i></i></button>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <p>04 / Prochaine étape</p>
+        <h2>Un projet, une idée ?<br /><em>Construisons-la ensemble.</em></h2>
+        <a class="button button-primary" href="mailto:emre.haydin@example.com">Me contacter <span>↗</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Emre Haydin</span>
+      <span>Fait avec curiosité &amp; JavaScript.</span>
+    </footer>
+
+    <dialog id="challenge-dialog">
+      <button class="dialog-close" type="button" aria-label="Fermer">×</button>
+      <p class="eyebrow">Défi débloqué</p>
+      <h2 id="challenge-title">Trouve la bonne réponse</h2>
+      <p>Quel langage rend une page web interactive ?</p>
+      <div class="answers">
+        <button type="button" data-answer="wrong">CSS</button>
+        <button type="button" data-answer="right">JavaScript</button>
+        <button type="button" data-answer="wrong">HTML</button>
+      </div>
+      <p id="challenge-result" aria-live="polite"></p>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
