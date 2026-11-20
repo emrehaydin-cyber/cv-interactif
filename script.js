@@ -38,8 +38,10 @@ document.querySelectorAll(".skill").forEach((skill) => {
   skill.addEventListener("click", () => {
     if (skill.classList.toggle("unlocked")) {
       xp = Math.min(300, xp + Number(skill.dataset.xp));
-      xpBar.style.width = `${(xp / 300) * 100}%`;
-      xpLabel.textContent = `${xp} / 300 XP`;
+    } else {
+      xp = Math.max(0, xp - Number(skill.dataset.xp));
     }
+    xpBar.style.width = `${(xp / 300) * 100}%`;
+    xpLabel.textContent = `${xp} / 300 XP`;
   });
 });
